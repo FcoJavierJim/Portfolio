@@ -66,7 +66,28 @@ header {
 .enlaces-navegacion a:hover {
     color: #2563eb;
 }
+.selector-idioma {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
 
+.selector-idioma button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 4px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.selector-idioma img {
+    display: block;
+    width: 24px;
+    height: 16px;
+}
 .boton-menu {
     display: none;
     background: none;
@@ -511,10 +532,17 @@ footer {
         padding: 15px 30px;
         border-top: 1px solid #f0f0f0;
     }
-
+.selector-idioma {
+    width: 100%;
+    padding: 15px 30px;
+    border-top: 1px solid #f0f0f0;
+    justify-content: flex-start;
+}
     .sobre-mi-contenido {
         grid-template-columns: 1fr;
         gap: 40px;
     }
+
+  
 
 }
