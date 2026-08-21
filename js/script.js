@@ -202,6 +202,8 @@ function cambiarIdioma(idioma) {
         elemento.textContent = traducciones[idioma][clave];
 
     });
+
+    localStorage.setItem("idioma", idioma)
 }
 
 document.getElementById("btn-es").addEventListener("click", () => {
@@ -211,3 +213,9 @@ document.getElementById("btn-es").addEventListener("click", () => {
 document.getElementById("btn-en").addEventListener("click", () => {
     cambiarIdioma("en");
 });
+
+const idiomaGuardado = localStorage.getItem("idioma");
+
+if (idiomaGuardado) {
+    cambiarIdioma(idiomaGuardado);
+}

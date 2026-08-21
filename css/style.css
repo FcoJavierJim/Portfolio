@@ -119,36 +119,77 @@ section h2 {
 
 #inicio {
     min-height: 80vh;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+
+    position: relative;
 }
+
+/* Pequeño detalle azul encima del contenido */
+
+#inicio::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 4px;
+
+    background-color: #2563eb;
+    border-radius: 10px;
+
+    top: 18%;
+    left: 0;
+}
+
+
+/* Saludo */
 
 #inicio p:first-child {
     color: #2563eb;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 1.1rem;
+
+    margin-bottom: 5px;
 }
+
+
+/* Nombre */
 
 #inicio h1 {
     font-size: 3.5rem;
     line-height: 1.1;
+
     margin: 10px 0 20px;
+
+    color: #111827;
 }
+
+
+/* Puesto */
 
 #inicio h2 {
     font-size: 1.5rem;
     font-weight: 400;
-    color: #555;
+
+    color: #2563eb;
+
     margin-bottom: 20px;
 }
 
+
+/* Descripción */
+
 #inicio p {
     max-width: 650px;
+
+    color: #4b5563;
+
+    line-height: 1.7;
+
     margin-bottom: 25px;
 }
-
 /* =========================
    SOBRE MÍ
    ========================= */
@@ -390,9 +431,7 @@ section h2 {
    CONTACTO
    ========================= */
 
-/* =========================
-   CONTACTO
-   ========================= */
+
 
 .contacto-contenedor {
     display: grid;
@@ -542,7 +581,28 @@ footer {
         grid-template-columns: 1fr;
         gap: 40px;
     }
+.contacto-enlaces {
+    grid-template-columns: 1fr;
+}
 
-  
+.contacto-item {
+    padding: 20px;
+}
+
+.contacto-cv {
+    padding: 25px 20px;
+}
+
+.cv-botones {
+    flex-direction: column;
+}
+
+.boton-cv {
+    text-align: center;
+    width: 100%;
+}
+  .experiencia-responsabilidades {
+    grid-template-columns: 1fr;
+}
 
 }
